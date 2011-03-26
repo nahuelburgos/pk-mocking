@@ -38,7 +38,7 @@ public class NameDictionaryFactory {
 	
 	private List<String> englishFemaleNames;
 	private List<String> englishMaleNames;
-	private List<String> englishSurames;
+	private List<String> englishSurnames;
 	
 	public List<String> getSpanishMaleNames() {
 		if (spanishMaleNames == null) {
@@ -60,7 +60,49 @@ public class NameDictionaryFactory {
 		}
 		return spanishSurnames;
 	}
+	
+	public List<String> getAsianMaleNames() {
+		if (asianMaleNames == null) {
+			asianMaleNames = loadFromFile(ASIAN_MALE_NAMES);
+		}
+		return asianMaleNames;
+	}
 
+	public List<String> getAsianFemaleNames() {
+		if (asianFemaleNames == null) {
+			asianFemaleNames = loadFromFile(ASIAN_FEMALE_NAMES);
+		}
+		return asianFemaleNames;
+	}
+
+	public List<String> getAsianSurnames() {
+		if (asianSurnames == null) {
+			asianSurnames = loadFromFile(ASIAN_SURNAMES);
+		}
+		return asianSurnames;
+	}
+
+	public List<String> getEnglishMaleNames() {
+		if (englishMaleNames == null) {
+			englishMaleNames = loadFromFile(ENGLISH_MALE_NAMES);
+		}
+		return englishMaleNames;
+	}
+
+	public List<String> getEnglishFemaleNames() {
+		if (englishFemaleNames == null) {
+			englishFemaleNames = loadFromFile(ENGLISH_FEMALE_NAMES);
+		}
+		return englishFemaleNames;
+	}
+
+	public List<String> getEnglishSurnames() {
+		if (englishSurnames == null) {
+			englishSurnames = loadFromFile(ENGLISH_SURNAMES);
+		}
+		return englishSurnames;
+	}
+	
 	private List<String> loadFromFile(String filename) {
 		List<String> retorno = new LinkedList<String>();
 		

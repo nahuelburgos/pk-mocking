@@ -9,7 +9,7 @@ import java.util.Map;
  * main function is to fill some object's fields. It keeps
  * track of the Field and the corresponding DataGenerator
  * 
- * @author lvidela
+ * @author Lucas Videla
  *
  * @param <E> is the generic class
  */
@@ -55,16 +55,4 @@ public class DataFiller<E> {
 		this.bindings.put(field, generator);
 	}
 
-//	public void bind(String fieldString, DataGenerator<? extends Object> generator) {
-//		Class type = null;
-//		
-//		try {
-//			Field field = type.getField(fieldString);
-//			this.bind(field, generator);
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
-//		
-//	}
-	
 }

@@ -4,7 +4,7 @@ package delucas.mocking.engine.core;
  * Defines the interface for the DataGenerators that can be used
  * inside and extending the mocking api.
  * 
- * @author lvidela
+ * @author Lucas Videla
  *
  * @param <E> is the class of the generated datum
  */

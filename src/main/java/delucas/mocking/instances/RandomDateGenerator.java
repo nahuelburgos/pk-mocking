@@ -18,9 +18,11 @@ public class RandomDateGenerator extends RandomRestrictedGenerator<Date> {
 	 * If it is initialized without specifying any boundary, it will pick
 	 * the first day of the Date representation and today as limits.
 	 */
-	@SuppressWarnings("deprecation")
 	public RandomDateGenerator() {
-		super(new Date(0,Calendar.JANUARY, 1), new Date());
+		super(new Date(), new Date());
+		Calendar calendar = Calendar.getInstance();
+		calendar.set(1900, Calendar.JANUARY, 1);
+		this.lowerLimit = calendar.getTime();
 	}
 	
 	/**
